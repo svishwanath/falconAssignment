@@ -1,0 +1,33 @@
+{
+  "name": "Assignmnet",
+  "version": "0.0.1",
+  "homepage": "https://github.com/FMRb/falconTestFelixRubio",
+  "authors": [
+    "Felix <f.rubio.gallego@gmail.com>"
+  ],
+  "description": "Facon Assignmnet",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "express",
+    "angularjs",
+    "socket.io"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.2.16",
+    "bootstrap": "~3.1.1",
+    "d3": "~3.4.6",
+    "less": "~1.7.0",
+    "angular": "~1.2.16"
+  }
+}

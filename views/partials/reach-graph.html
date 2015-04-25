@@ -1,0 +1,68 @@
+
+<div class="container">
+    <div class="headcontainer">
+    Reach Graph
+	<input type="button" id="reachgraphbutton" class="btn btn-success addpublishitem" value="Add new element to the graph"/>
+	
+    </div>
+    <div class="row">
+        <div class="col-md-8" style="
+    margin-left: -86px;
+    float: left;">
+            <graph-line data="graphData">
+            </graph-line>
+        </div>
+        <div id="graph-form" class="col-md-4 form-horizontal" >
+
+     
+            <div class="form-group">
+                          <label class="col-sm-4 control-label"for="valueGraph">Value</label>
+                    
+     
+               <div class="col-sm-6">
+                    <input type="text" pattern="[0-9]*" class="form-control" id="valueGraph" ng-model="reachForm.value">
+                       
+                </div>
+            </div>
+
+			
+			
+			
+			
+			
+			
+			
+            <div class="form-group">
+                        <label class="col-sm-4 control-label">Select type</label>
+
+                    <div class="col-md-6">
+                        <select class="form-control" ng-init="postSelected = typePost[0]"
+                                ng-model="postSelected" ng-options="post.value for post in typePost">
+                        </select>
+                    </div>
+            </div>
+   
+   
+   
+   
+            <div class="form-group">
+
+                        <label class="col-sm-4 control-label">Select time</label>
+
+                    <div class="col-md-6">
+                        <select class="form-control" ng-init="timeSelected = timeOptions[0]"
+                                ng-model="timeSelected" ng-options="time.value for time in timeOptions">
+                        </select>
+                    </div>
+            </div>
+
+
+			
+        <div class="col-md-6" style="text-align:center">
+            <button ng-click="submitNewValue()" class="btn btn-success">Submit Value</button>
+        </div>
+        </div>
+
+
+    </div>
+</div>

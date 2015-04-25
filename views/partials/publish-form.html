@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="header-container">
+    {{header}}
+    </div>
+    <div class="row body-container">
+            <form  class="form-horizontal"  role="form">
+                <div class="container">
+                    <div class="form-group">
+                      <label class="col-sm-3 control-label" for="statusPublish">Status</label>
+							 <div class="col-sm-6">
+                            <input type="text" class="form-control" id="statusPublish" ng-model="myForm.status">
+                        </div>
+
+                    </div>
+                  
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"  for="contentMessage">Description</label>
+						 <div class="col-sm-6">
+                        <textarea name="message" id="contentMessage" class="form-control" ng-model="myForm.content.message" rows="3"></textarea>
+                    </div>
+					</div>
+					
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label"  for="urlImage">Image URL</label>
+						 <div class="col-sm-6">
+                        <input type="url" class="form-control" ng-model="myForm.content.media.url" id="urlImage" placeholder="Enter url image">
+                    </div>
+					</div>
+					
+					
+                <div class=".radio-inline">
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network"   value="facebook" checked>
+                        Facebook
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network" value="twitter">
+                        Twitter
+                    </label>
+                    <label>
+                        <input type="radio" ng-model="myForm.content.network" value="linkedin">
+                        Linkedin
+                    </label>
+                </div>
+           
+ 
+                <div class="form-group">
+                  
+                        <label class="col-sm-3 control-label">Select Country</label>
+
+                   <div class="col-sm-6 control-label" >
+                        <select class="form-control" ng-model="countrySelected" ng-options="country.value for country in countries">
+                        </select>
+                    </div>
+                </div>
+				
+				
+
+
+                <div class="form-group">
+
+                       <label class="col-sm-3 control-label">Select Language</label>
+
+                   <div class="col-sm-6 control-label" >
+
+                        <select class="form-control" ng-init="languageSelected" ng-model="languageSelected" ng-options="language.value for language in languages">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                          <label class="col-sm-3 control-label">Select City</label>
+
+                   <div class="col-sm-6 control-label" >
+                        <select class="form-control" ng-model="citySelected" ng-options="city.value for city in cities">
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+
+                       <label class="col-sm-3 control-label">Select Region</label>
+
+                     <div class="col-sm-6 control-label" >
+                        <select class="form-control" ng-model="regionSelected" ng-options="region.value for region in regions">
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+      
+                        <label class="col-sm-3 control-label">Select Channel</label>
+
+                      <div class="col-sm-6 control-label" >
+                        <select class="form-control" ng-model="channelSelected" ng-options="channel.name for channel in channels">
+                        </select>
+                    </div>
+                </div>
+				
+          
+              <div class="form-group">
+                <button ng-click="submitForm()" class="btn btn-success">Submit</button>
+            </div>
+			</div>
+            </form>
+
+        </div>
+    </div>
+
+

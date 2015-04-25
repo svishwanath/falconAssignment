@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="header-container">
+    Publish details
+    </div>
+	<div class="btn-primary" id="status">
+                Status: {{publish.status}}
+            </div>
+    <div class="row body-container">
+        <div id="publish-detail-container">
+            
+
+            <div class="col-md-6">
+                <img ng-src="{{publish.content.media.url}}" />
+                <br>
+                 <p>Network:<img class="img-network" ng-src="/images/{{publish.content.network}}.png" alt="{{publish.content.network}}"/>
+                </p>
+                <section id="tag-container">
+                    Tags:
+                    <div ng-repeat="tag in publish.tags" class="list-elements tag-element">
+                        {{tag}}
+                    </div>
+                </section>
+            
+                <label style="text-align:left;">Message:</label>
+                <p class="message">{{publish.content.message}}</p>
+                <section id="channel-container">
+                    <label>Channels:</label>
+                    <br>
+                    <div ng-repeat="channel in publish.channels" class="list-elements" >
+                        {{channel.name}}
+                    </div>
+                </section>
+            </div>
+            <div id="geo-container" class="col-md-6">
+
+				 <table  class="table col-md-12" >
+				 <tr>
+				 <th>Countries</th>	 <th>Languages</th>	 <th>Cities</th><th>Regions</th></tr>
+                    <tr>
+					
+					<td><div ng-repeat="country in publish.geo.countries" class="list-elements geo-elements">
+                            {{country.value}}
+                        </div></td>
+                        <td><div ng-repeat="language in publish.geo.languages" class="list-elements geo-elements">
+                            {{language.value}}
+                        </div></td>
+                        <td><div ng-repeat="city in publish.geo.cities" class="list-elements geo-elements">
+                            {{city.value}}
+                        </div></td>
+                        <td> <div ng-repeat="region in publish.geo.regions" class="list-elements geo-elements">
+                            {{region.value}}
+                        </div></td>
+                    </tr>
+                </table>
+			
+			
+			
+			      </div>
+			
+            <div class="col-md-12">
+                <button ng-click="updateItem()" class="btn btn-success">Update </button>
+                <button ng-click="deleteItem()" class="btn btn-danger">Delete item</button>
+
+            </div>
+        </div>
+    </div>
+</div>

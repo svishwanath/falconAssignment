@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="headcontainer">
+    Publishing content 
+	 <a href="#/publishing/create" class="btn btn-success addpublishitem">Add new publish item</a>
+    </div>
+    <div class="row body-container">
+        <div class="col-md-12">
+           
+            <div class="publish-list">
+            
+				
+				
+				
+				
+				
+				 <table  class="table col-md-12" >
+				 <tr>
+				 <th>ITEM</th>	 <th>Description</th>	 <th>Action</th></tr>
+                    <tr ng-repeat="publish in publishes">
+                        <td><img ng-src="{{publish.content.media.url}}" /></td>
+                        <td><span>{{publish.content.message}}</span></td>
+                        <td> <a href="#/publishing/{{publish.id}}" class="btn btn-info" >Details</a></td>
+                    </tr>
+                </table>
+				
+				
+				
+            </div>
+        </div>
+    </div>
+</div>
